@@ -57,10 +57,7 @@ public class MoneyStock {
     // -------------------
     // Usage
     public boolean isEmpty() {
-        if (stock == 0) {
-            return true;
-        }
-        return false;
+        return stock == 0;
     }
 
     public boolean isValidTransaction(int income, int change) {
@@ -100,10 +97,7 @@ public class MoneyStock {
     }
 
     public boolean isFull() {
-        if (stock >= capacity * 0.9) {
-            return true;
-        }
-        return false;
+        return stock >= capacity * 0.9;
     }
 
     public void resetCounterIncome() {
