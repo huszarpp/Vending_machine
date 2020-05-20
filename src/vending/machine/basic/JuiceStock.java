@@ -47,10 +47,7 @@ public class JuiceStock {
     // -------------------
     // Usage
     public boolean isValidTransaction(int pieces) {
-        if (pieces > stock) {
-            return false;
-        }
-        return true;
+        return pieces <= stock;
     }
 
     public void printProblems() {
@@ -74,10 +71,7 @@ public class JuiceStock {
     // -------------------
     // Maintenance
     public boolean isEmpty() {
-        if (stock <= capacity * 0.1) {
-            return true;
-        }
-        return false;
+        return stock <= capacity * 0.1;
     }
 
     public void fillUp() {
@@ -85,9 +79,6 @@ public class JuiceStock {
     }
 
     public boolean isFull() {
-        if (stock == capacity) {
-            return true;
-        }
-        return false;
+        return stock == capacity;
     }
 }
